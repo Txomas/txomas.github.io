@@ -8,17 +8,19 @@
 
 <script type="text/javascript">
 function checkAnswers(){
-	var answer = parseInt(document.getElementById('UserNumber').value)
+	var answer = parseInt(prompt("Введите число:"))
 	var number = Math.floor(Math.random()*100) 
-	if (answer == number){
-	alert("Правильно! Вы угадали!")
-	} else {
-		if (answer < number){
-			alert("Ваше число меньше загаданного.")
+	do{if (answer == number){
+		alert("Правильно! Вы угадали!")
+		break 
 		} else {
-			alert("Ваше число больше загаданного.")
+			if (answer < number){
+			alert("Ваше число меньше загаданного. Введите q, чтобы выйти.")
+			} else {
+			alert("Ваше число больше загаданного. Введите q, чтобы выйти.")
+			}
 		}
-	}
+	} while (answer!="q")	
 }	
 </script>>
 
