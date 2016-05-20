@@ -15,9 +15,9 @@ function checkAnswers(){
 		break 
 		} else {
 			if (answer < number){
-			alert("Ваше число меньше загаданного. Введите q, чтобы выйти.")
+			answer = parseInt(prompt("Ваше число меньше загаданного. Введите q, чтобы выйти."))
 			} else {
-			alert("Ваше число больше загаданного. Введите q, чтобы выйти.")
+			answer = parseInt(prompt("Ваше число больше загаданного. Введите q, чтобы выйти."))
 			}
 		}
 	} while (answer!="q")	
@@ -53,13 +53,8 @@ function checkAnswers(){
 		<h3>Угадай число!</h3>
 
 		<p>Компьютер загадывает случайное число от 1 до 100. У вас есть неограниченное количество попыток. При ответе будет говориться меньше или больше ваше число задуманного.<p/>
- 
-		<p>Введите число:<p/>
-		<input type="text" id="UserNumber" />
-		
-		</br></br></br>
 
-		<input type="button" value="Ответить" onClick="checkAnswers()"/>
+		<input type="button" value="Начать" onClick="checkAnswers()"/>
 
 	</div>
            
